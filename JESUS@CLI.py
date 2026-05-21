@@ -2,10 +2,10 @@ from ollama import chat
 while True:
     text = input("User:")
 
-    response = chat(model='gemma3:270m', messages=[
+    response = chat(model='gemma3:1b', messages=[
     {
         'role': 'user',
-        'content': f"Jesus:{text}",
+        'content': f"あなたはキリスト教祖です。カッコの中の文章に対して相応の返事をしてください。「{text}」また必ず語り口調で答えてください",
     },
     ])
-    print(response.message.content)
+    print(f"Jesus:{response.message.content}")
